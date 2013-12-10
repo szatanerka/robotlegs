@@ -10,13 +10,10 @@
         </excludedEntries>
       </libraryPathEntry>
       <libraryPathEntry kind="1" linkType="1" path="libs"/>
-      <libraryPathEntry kind="3" linkType="1" path="/Users/lizard/Downloads/robotlegs-framework-v1/bin/robotlegs-framework-v1.5.2.swc" useDefaultLinkType="false"/>
-      <libraryPathEntry kind="3" linkType="1" path="/Users/lizard/Downloads/robotlegs-framework-v1/libs/SwiftSuspenders-v1.6.0.swc" useDefaultLinkType="false"/>
       <libraryPathEntry kind="1" linkType="1" path="${FLEXUNIT_LIB_LOCATION}/version4libs/Common"/>
       <libraryPathEntry kind="1" linkType="1" path="${FLEXUNIT_LIB_LOCATION}/version4libs/FlexProject"/>
       <libraryPathEntry kind="1" linkType="1" path="${FLEXUNIT_LIB_LOCATION}/version4libs/FlexProject_Extended"/>
       <libraryPathEntry kind="1" linkType="1" path="${FLEXUNIT_LOCALE_LOCATION}/version4locale/"/>
-      <libraryPathEntry kind="1" linkType="1" path="/Users/lizard/Desktop/libs"/>
     </libraryPath>
     <sourceAttachmentPath/>
   </compiler>

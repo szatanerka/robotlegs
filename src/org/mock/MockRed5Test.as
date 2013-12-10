@@ -1,3 +1,4 @@
+//test package set only one value to test it is just simple test
 package org.mock
 {
 	import flash.geom.Point;
@@ -38,15 +39,17 @@ import org.mock4as.Mock;
 class MockTranslator extends Mock implements IShape {
 	
 	private var _shape:Point;
-	
+//return point mouse
 	public function getShape():Point
 	{
 		return _shape;
 	}
+//set mouse start Point
 	public function setShape(evt:Point):void
 	{
 		_shape = evt;
 	}
+//to test mock class
 	public function setShapeTest(from:uint, to:uint):uint
 	{
 		record("setShapeTest", from, to);

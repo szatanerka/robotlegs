@@ -1,3 +1,4 @@
+//mock red5 class to resend value to robotlegs
 package org.mock
 {
     import flexunit.framework.TestCase;
@@ -14,13 +15,14 @@ package org.mock
 		public function Red5Test(){
             super();
         }
-            			
+        //return moved mouse Point  			
 		public function getShape():Point
 		{
 	
 			return myGreeting.getShape();
 			
 		}
+		//set mouse start Point mouse down
 		public function setShape(evt:Point):void
 		{
 			 myGreeting.setShape(evt);
@@ -29,7 +31,7 @@ package org.mock
 	}
 }
 
-// Inner Class
+// Inner Class to resend
 import flash.geom.Point;
 
 import org.mock.IShape;

@@ -11,7 +11,7 @@
 			import spark.core.SpriteVisualElement;
 	
 			public var myDrawing:Shape = new Shape();
-			
+			//create visible shape for draw
 			protected function init(event:FlexEvent):void
 			{
 				drawCanvas.addChild(myDrawing);

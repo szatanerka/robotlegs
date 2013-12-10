@@ -4,11 +4,11 @@
 			   xmlns:mx="library://ns.adobe.com/flex/mx" minWidth="955" minHeight="600" xmlns:test="org.test.*" xmlns:view="org.test.view.*">
 	
 	<fx:Declarations>
-		<!-- Place non-visual elements (e.g., services, value objects) here -->
+		<!-- this make magic -->
 		<test:context contextView="{this}"/>
 	</fx:Declarations>
 	<mx:HBox>
-		<view:panelView title="lesson1"/>
-		<view:panelView title="lesson2"/>	
+		<view:panelView title="panel1"/>
+		<view:panelView title="panel2"/>	
 	</mx:HBox>
 </s:Application>

@@ -1,3 +1,4 @@
+//simple dispatch call test 
 package org.test.event
 {
 	import flash.events.Event;

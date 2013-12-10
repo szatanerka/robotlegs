@@ -1,10 +1,11 @@
+//start class
 package org.test
 {
 	import flash.display.DisplayObjectContainer;
 	
 	import org.robotlegs.mvcs.Context;
-	import org.test.model.model;
-	import org.test.view.mediator;
+	import org.test.model.Model;
+	import org.test.view.panelMediator;
 	import org.test.view.panelView;
 	
 	public class context extends Context
@@ -15,8 +16,8 @@ package org.test
 		}
 		override public function startup():void
 		{
-			injector.mapSingleton(model);
-			mediatorMap.mapView(panelView,mediator);
+			injector.mapSingleton(Model);
+			mediatorMap.mapView(panelView,panelMediator);
 			super.startup();
 		}
 	}
