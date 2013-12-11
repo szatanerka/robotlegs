@@ -1,12 +1,14 @@
-//start class
-package org.test
+/**
+ * contextClass.
+ */
+package org.mock
 {
 	import flash.display.DisplayObjectContainer;
 	
 	import org.robotlegs.mvcs.Context;
-	import org.test.model.Model;
-	import org.test.view.panelMediator;
-	import org.test.view.panelView;
+	import org.mock.model.Model;
+	import org.mock.view.panelMediator;
+	import org.mock.view.panelView;
 	
 	public class context extends Context
 	{
@@ -14,6 +16,10 @@ package org.test
 		{
 			super();
 		}
+		/**
+		 * ovveride robotlegs Context startup.
+		 * Create structure to fireup.
+		 */
 		override public function startup():void
 		{
 			injector.mapSingleton(Model);

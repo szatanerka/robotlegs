@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testrun name="" >
 <testsuite  name="Default Test Suite" project="test">
-<testsuite name="org.mock:MockRed5Test" type="testcaseclass"/>
+<testsuite name="org.test:MockRed5Test" type="testcaseclass"/>
 </testsuite>
 </testrun>

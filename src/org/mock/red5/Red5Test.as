@@ -1,5 +1,7 @@
-//mock red5 class to resend value to robotlegs
-package org.mock
+/**
+ * Mock class to send and get parametrs to fake mock.
+ */
+package org.mock.red5
 {
     import flexunit.framework.TestCase;
     import flexunit.framework.TestSuite;
@@ -15,14 +17,18 @@ package org.mock
 		public function Red5Test(){
             super();
         }
-        //return moved mouse Point  			
+		/**
+		 * Fake mock to return point.
+		 */
 		public function getShape():Point
 		{
 	
 			return myGreeting.getShape();
 			
 		}
-		//set mouse start Point mouse down
+		/**
+		 * Fake mock to set point.
+		 */
 		public function setShape(evt:Point):void
 		{
 			 myGreeting.setShape(evt);
@@ -31,24 +37,34 @@ package org.mock
 	}
 }
 
-// Inner Class to resend
+/**
+ * Inner to resend.
+ */
 import flash.geom.Point;
 
-import org.mock.IShape;
+import org.mock.red5.IShape;
 import org.mock4as.Mock;
 
 class MockShape extends Mock implements IShape {
 	
 	private var _shape:Point;
-
+	/**
+	 * Get point.
+	 */
 	public function getShape():Point
 	{
 		return _shape;
 	}
+	/**
+	 * Set point.
+	 */
 	public function setShape(evt:Point):void
 	{
 		_shape = evt;
 	}
+	/**
+	 * Only for interface.
+	 */
 	public function setShapeTest(from:uint, to:uint):uint
 	{
 		record("setShape", from, to);

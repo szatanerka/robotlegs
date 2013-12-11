@@ -1,5 +1,7 @@
-//test package set only one value to test it is just simple test
-package org.mock
+/**
+ * Mock test class.
+ */
+package org.test
 {
 	import flash.geom.Point;
 	
@@ -7,6 +9,7 @@ package org.mock
 	import flexunit.framework.TestSuite;
 	
 	import org.mock4as.Mock;
+	import org.mock.red5.Red5;
 	
 	public class MockRed5Test extends TestCase
 	{
@@ -14,7 +17,9 @@ package org.mock
 			super();
 		}
 		
-		
+		/**
+		 * Test sending point which is only test for fun.
+		 */
 		public function testShapeBehavior():void{
 			// create the mock
 			var mock:MockTranslator = new MockTranslator();
@@ -30,26 +35,34 @@ package org.mock
 	}
 }
 
-// Inner Class
+/**
+ * Inner class.
+ */
 import flash.geom.Point;
 
-import org.mock.IShape;
+import org.mock.red5.IShape;
 import org.mock4as.Mock;
 
 class MockTranslator extends Mock implements IShape {
 	
 	private var _shape:Point;
-//return point mouse
+	/**
+	 * Return mouse point.
+	 */
 	public function getShape():Point
 	{
 		return _shape;
 	}
-//set mouse start Point
+	/**
+	 * Set mouse point.
+	 */
 	public function setShape(evt:Point):void
 	{
 		_shape = evt;
 	}
-//to test mock class
+	/**
+	 * Test mock.
+	 */
 	public function setShapeTest(from:uint, to:uint):uint
 	{
 		record("setShapeTest", from, to);

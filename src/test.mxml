@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
 			   xmlns:s="library://ns.adobe.com/flex/spark" 
-			   xmlns:mx="library://ns.adobe.com/flex/mx" minWidth="955" minHeight="600" xmlns:test="org.test.*" xmlns:view="org.test.view.*">
+			   xmlns:mx="library://ns.adobe.com/flex/mx" minWidth="955" minHeight="600" xmlns:test="org.test.*" xmlns:view="org.mock.view.*" xmlns:mock="org.mock.*">
 	
 	<fx:Declarations>
 		<!-- this make magic -->
-		<test:context contextView="{this}"/>
+		<mock:context contextView="{this}"/>
 	</fx:Declarations>
 	<mx:HBox>
 		<view:panelView title="panel1"/>

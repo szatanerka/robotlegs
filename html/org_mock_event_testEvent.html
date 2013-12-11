@@ -12,7 +12,7 @@
 		<script type="text/javascript" src="../js/6_shBrushJava.min.js"></script>
 		<script type="text/javascript" src="../js/7_VisDoc.min.js"></script>
 	</head>
-	<body class='isShowingNavigation' id='page_org_test_event_testEvent'>
+	<body class='isShowingNavigation' id='page_org_mock_event_testEvent'>
 	    <div id='page'> 
 			<div id='wrapper'>
 				<div id='outer'> 
@@ -30,7 +30,7 @@
 		<th>Package:</th>
 		<td>
 			<ul>
-								<li>			<a href="package_org_test_event.html">org.test.event</a>
+								<li>			<a href="package_org_mock_event.html">org.mock.event</a>
 </li>
 							</ul>
 		</td>
@@ -45,17 +45,22 @@
 	</tr>
 																<tr>
 		<th class='classDetails'>Classpath:</th>
-		<td class='classDetails'>org.test.event.testEvent</td>
+		<td class='classDetails'>org.mock.event.testEvent</td>
 	</tr>
 	<tr>
 		<th class='classDetails'>File last modified:</th>
-		<td class='classDetails'>Tuesday, 10 December 2013, 15:45:10</td>
+		<td class='classDetails'>Wednesday, 11 December 2013, 05:02:23</td>
 	</tr>
 		</table>
 	</div>
 	<div class='sourceCode'>
-				<span class='sourceCodeShow'><a href="#"><span class='closure'>&#9658;&nbsp;</span><span class='linkLabel'>View source</span></a></span><span class='sourceCodeHide'><a href="#"><span class='disclosure'>&#9660;&nbsp;</span><span class='linkLabel'>Hide source</span></a></span>	<pre id="source" class="brush:as3">//simple dispatch call test 
-package org.test.event
+				<span class='sourceCodeShow'><a href="#"><span class='closure'>&#9658;&nbsp;</span><span class='linkLabel'>View source</span></a></span><span class='sourceCodeHide'><a href="#"><span class='disclosure'>&#9660;&nbsp;</span><span class='linkLabel'>Hide source</span></a></span>	<pre id="source" class="brush:as3">/**
+ *Dispatched when the user presses on panel and move the mouse.
+ *this event is dispatched repeatedly as long as the button stays down.
+ *
+ *@eventType
+ */
+package org.mock.event
 {
     import flash.events.Event;
     
@@ -166,17 +171,63 @@ package org.test.event
 																	<a href="package_org_mock.html">org.mock</a>
 
 															<ul>
-		<li  class=''>											<li id='menu_org_mock_IShape' class='interface'>				<a href="org_mock_IShape.html"><span class='packagePath'>org.mock.</span>IShape</a>
+		<li  class=''>											<li id='menu_org_mock_context' class=''>				<a href="org_mock_context.html"><span class='packagePath'>org.mock.</span>context</a>
 </li>
-							<li id='menu_org_mock_MockRed5Test' class=''>				<a href="org_mock_MockRed5Test.html"><span class='packagePath'>org.mock.</span>MockRed5Test</a>
+						</li>
+</ul>
+
+				</li>
+</ul>
+
+							<ul>
+		<li  id='menu_package_org_mock_event' class='package'>
+																	<a href="package_org_mock_event.html">org.mock.event</a>
+
+															<ul>
+		<li  class=''>											<li id='menu_org_mock_event_testEvent' class=''>				<a href="org_mock_event_testEvent.html"><span class='packagePath'>org.mock.event.</span>testEvent</a>
 </li>
-							<li id='menu_org_mock_MockShape' class='private'>				<a href="org_mock_MockShape.html"><span class='packagePath'>org.mock.</span>MockShape</a>
+						</li>
+</ul>
+
+				</li>
+</ul>
+
+							<ul>
+		<li  id='menu_package_org_mock_model' class='package'>
+																	<a href="package_org_mock_model.html">org.mock.model</a>
+
+															<ul>
+		<li  class=''>											<li id='menu_org_mock_model_Model' class=''>				<a href="org_mock_model_Model.html"><span class='packagePath'>org.mock.model.</span>Model</a>
 </li>
-							<li id='menu_org_mock_MockTranslator' class='private'>				<a href="org_mock_MockTranslator.html"><span class='packagePath'>org.mock.</span>MockTranslator</a>
+						</li>
+</ul>
+
+				</li>
+</ul>
+
+							<ul>
+		<li  id='menu_package_org_mock_red5' class='package'>
+																	<a href="package_org_mock_red5.html">org.mock.red5</a>
+
+															<ul>
+		<li  class=''>											<li id='menu_org_mock_red5_IShape' class='interface'>				<a href="org_mock_red5_IShape.html"><span class='packagePath'>org.mock.red5.</span>IShape</a>
 </li>
-							<li id='menu_org_mock_Red5' class=''>				<a href="org_mock_Red5.html"><span class='packagePath'>org.mock.</span>Red5</a>
+							<li id='menu_org_mock_red5_Red5' class=''>				<a href="org_mock_red5_Red5.html"><span class='packagePath'>org.mock.red5.</span>Red5</a>
 </li>
-							<li id='menu_org_mock_Red5Test' class=''>				<a href="org_mock_Red5Test.html"><span class='packagePath'>org.mock.</span>Red5Test</a>
+							<li id='menu_org_mock_red5_Red5Test' class=''>				<a href="org_mock_red5_Red5Test.html"><span class='packagePath'>org.mock.red5.</span>Red5Test</a>
+</li>
+						</li>
+</ul>
+
+				</li>
+</ul>
+
+							<ul>
+		<li  id='menu_package_org_mock_view' class='package'>
+																	<a href="package_org_mock_view.html">org.mock.view</a>
+
+															<ul>
+		<li  class=''>											<li id='menu_org_mock_view_panelMediator' class=''>				<a href="org_mock_view_panelMediator.html"><span class='packagePath'>org.mock.view.</span>panelMediator</a>
 </li>
 						</li>
 </ul>
@@ -189,46 +240,7 @@ package org.test.event
 																	<a href="package_org_test.html">org.test</a>
 
 															<ul>
-		<li  class=''>											<li id='menu_org_test_context' class=''>				<a href="org_test_context.html"><span class='packagePath'>org.test.</span>context</a>
-</li>
-						</li>
-</ul>
-
-				</li>
-</ul>
-
-							<ul>
-		<li  id='menu_package_org_test_event' class='package'>
-																	<a href="package_org_test_event.html">org.test.event</a>
-
-															<ul>
-		<li  class=''>											<li id='menu_org_test_event_testEvent' class=''>				<a href="org_test_event_testEvent.html"><span class='packagePath'>org.test.event.</span>testEvent</a>
-</li>
-						</li>
-</ul>
-
-				</li>
-</ul>
-
-							<ul>
-		<li  id='menu_package_org_test_model' class='package'>
-																	<a href="package_org_test_model.html">org.test.model</a>
-
-															<ul>
-		<li  class=''>											<li id='menu_org_test_model_Model' class=''>				<a href="org_test_model_Model.html"><span class='packagePath'>org.test.model.</span>Model</a>
-</li>
-						</li>
-</ul>
-
-				</li>
-</ul>
-
-							<ul>
-		<li  id='menu_package_org_test_view' class='package'>
-																	<a href="package_org_test_view.html">org.test.view</a>
-
-															<ul>
-		<li  class=''>											<li id='menu_org_test_view_panelMediator' class=''>				<a href="org_test_view_panelMediator.html"><span class='packagePath'>org.test.view.</span>panelMediator</a>
+		<li  class=''>											<li id='menu_org_test_MockRed5Test' class=''>				<a href="org_test_MockRed5Test.html"><span class='packagePath'>org.test.</span>MockRed5Test</a>
 </li>
 						</li>
 </ul>
@@ -270,11 +282,7 @@ package org.test.event
 				<div id='headerContentWrapper'>
 					<div id='headerContent'>
 						<ul id='headerButtons'>
-															<li id='toggleTocButton'><a href="#"><span class='disclosure'>&#9660;</span><span class='closure'>&#9658;</span>Navigation</a></li>							<li id='togglePrivateButton'>
-	<span class='privateHide'><a href="#" class='jqButton jqButtonSmall'><span class='jqButtonIcon'>&times;</span>Hide private and protected</a></span>
-	<span class='privateShow'><a href="#" class='jqButton jqButtonSmall'><span class='jqButtonIcon'>+</span>Show private and protected</a></span>
-</li>
-						</ul>
+															<li id='toggleTocButton'><a href="#"><span class='disclosure'>&#9660;</span><span class='closure'>&#9658;</span>Navigation</a></li>													</ul>
 					</div>
 				</div>
 			</div>
