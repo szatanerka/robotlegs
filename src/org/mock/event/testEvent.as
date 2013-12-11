@@ -1,5 +1,10 @@
-//simple dispatch call test 
-package org.test.event
+/**
+ *Dispatched when the user presses on panel and move the mouse.
+ *this event is dispatched repeatedly as long as the button stays down.
+ *
+ *@eventType
+ */
+package org.mock.event
 {
 	import flash.events.Event;
 	

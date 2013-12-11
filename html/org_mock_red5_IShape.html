@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" encoding="utf-8">
 	<head>
-		<title>MockShape | Documentation</title>
+		<title>IShape | Documentation</title>
 		<link rel="stylesheet" type="text/css" href="../css/shCoreDefault.min.css" />
 		<link rel="stylesheet" type="text/css" href="../css/VisDoc.min.css" />
 		<script type="text/javascript" src="../js/1_jquery.min.js"></script>
@@ -12,7 +12,7 @@
 		<script type="text/javascript" src="../js/6_shBrushJava.min.js"></script>
 		<script type="text/javascript" src="../js/7_VisDoc.min.js"></script>
 	</head>
-	<body class='isShowingNavigation' id='page_org_mock_MockShape'>
+	<body class='isShowingNavigation' id='page_org_mock_red5_IShape'>
 	    <div id='page'> 
 			<div id='wrapper'>
 				<div id='outer'> 
@@ -20,17 +20,17 @@
 						<div id='main'>
 							<div id='clearHeaderCenter'></div> 
 							<div id='mainContent'>
-																<h1>MockShape</h1>									<div class='classProperties'>
+																<h1>IShape</h1>									<div class='classProperties'>
 		<table cellspacing='0'>
 				<tr>
 		<th>Kind of class:</th>
-		<td>internal class</td>
+		<td>public interface</td>
 	</tr>
 							<tr>
 		<th>Package:</th>
 		<td>
 			<ul>
-								<li>			<a href="package_org_mock.html">org.mock</a>
+								<li>			<a href="package_org_mock_red5.html">org.mock.red5</a>
 </li>
 							</ul>
 		</td>
@@ -39,85 +39,44 @@
 		<th>Inherits from:</th>
 		<td>
 			<ul>
-								<li>			Mock</li>
+								<li>			none</li>
 							</ul>
 		</td>
 	</tr>
-				<tr>
-		<th>Implements:</th>
+							<tr>
+		<th>Implemented by:</th>
 		<td>
 			<ul>
-								<li>			<a href="org_mock_IShape.html">IShape</a>
+								<li>			<a href="org_mock_red5_MockShape.html">MockShape</a>
+</li>
+								<li>			<a href="org_test_MockTranslator.html">MockTranslator</a>
 </li>
 							</ul>
 		</td>
 	</tr>
-													<tr>
+										<tr>
 		<th class='classDetails'>Classpath:</th>
-		<td class='classDetails'>org.mock.MockShape</td>
+		<td class='classDetails'>org.mock.red5.IShape</td>
 	</tr>
 	<tr>
 		<th class='classDetails'>File last modified:</th>
-		<td class='classDetails'>Tuesday, 10 December 2013, 15:46:01</td>
+		<td class='classDetails'>Wednesday, 11 December 2013, 05:03:55</td>
 	</tr>
 		</table>
 	</div>
 	<div class='sourceCode'>
-				<span class='sourceCodeShow'><a href="#"><span class='closure'>&#9658;&nbsp;</span><span class='linkLabel'>View source</span></a></span><span class='sourceCodeHide'><a href="#"><span class='disclosure'>&#9660;&nbsp;</span><span class='linkLabel'>Hide source</span></a></span>	<pre id="source" class="brush:as3">//mock red5 class to resend value to robotlegs
-package org.mock
+				<span class='sourceCodeShow'><a href="#"><span class='closure'>&#9658;&nbsp;</span><span class='linkLabel'>View source</span></a></span><span class='sourceCodeHide'><a href="#"><span class='disclosure'>&#9660;&nbsp;</span><span class='linkLabel'>Hide source</span></a></span>	<pre id="source" class="brush:as3">/**
+ * This is interface.
+ */
+package org.mock.red5
 {
-    import flexunit.framework.TestCase;
-    import flexunit.framework.TestSuite;
-        
-    import org.mock4as.Mock;
     import flash.geom.Point;
-
-    public class Red5Test extends TestCase
+    public interface IShape
     {
-        public var mock:MockShape = new MockShape();
-        public var myGreeting:Red5 = new Red5(mock);
-        
-        public function Red5Test(){
-            super();
-        }
-        //return moved mouse Point              
-        public function getShape():Point
-        {
-    
-            return myGreeting.getShape();
-            
-        }
-        //set mouse start Point mouse down
-        public function setShape(evt:Point):void
-        {
-             myGreeting.setShape(evt);
+        function getShape():Point;
+        function setShape(evt:Point):void;
+        function setShapeTest(from:uint, to:uint):uint;
 
-        }
-    }
-}
-
-// Inner Class to resend
-import flash.geom.Point;
-
-import org.mock.IShape;
-import org.mock4as.Mock;
-
-class MockShape extends Mock implements IShape {
-    
-    private var _shape:Point;
-
-    public function getShape():Point
-    {
-        return _shape;
-    }
-    public function setShape(evt:Point):void
-    {
-        _shape = evt;
-    }
-    public function setShapeTest(from:uint, to:uint):uint
-    {
-        record("setShape", from, to);
-        return expectedReturnFor("setShape") as uint;
     }
 }</pre>
 </div>
@@ -133,14 +92,6 @@ class MockShape extends Mock implements IShape {
 			<div class='clear'></div>
 		</div>
 				<div class='memberList'>
-							<div class='memberSummaryPart private'>
-					<span class='title'>Instance properties</span>
-					<ul>
-													<li class='private'>								
-								<a href="#_shape">_shape</a>
-																<span class='typeInfo'> : Point</span>															</li>
-											</ul>
-									</div>
 							<div class='memberSummaryPart'>
 					<span class='title'>Instance methods</span>
 					<ul>
@@ -156,13 +107,7 @@ class MockShape extends Mock implements IShape {
 											</ul>
 									</div>
 					</div>	</div>
-																					<div class='memberSection private'>
-			<h2 id='Instanceproperties'>Instance properties</h2>
-							<div class='member private' id='_shape'>
-									<h3>_shape</h3>											<div class='fullMemberString'>
-							<span class='code'>private <strong>_shape</strong>:Point</span><span class='access'>(read,write)</span>						</div>														</div>
-					</div>
-				<div class='memberSection'>
+																					<div class='memberSection'>
 			<h2 id='Instancemethods'>Instance methods</h2>
 							<div class='member' id='getShape'>
 									<h3>getShape</h3>											<div class='fullMemberString'>
@@ -194,17 +139,63 @@ class MockShape extends Mock implements IShape {
 																	<a href="package_org_mock.html">org.mock</a>
 
 															<ul>
-		<li  class=''>											<li id='menu_org_mock_IShape' class='interface'>				<a href="org_mock_IShape.html"><span class='packagePath'>org.mock.</span>IShape</a>
+		<li  class=''>											<li id='menu_org_mock_context' class=''>				<a href="org_mock_context.html"><span class='packagePath'>org.mock.</span>context</a>
 </li>
-							<li id='menu_org_mock_MockRed5Test' class=''>				<a href="org_mock_MockRed5Test.html"><span class='packagePath'>org.mock.</span>MockRed5Test</a>
+						</li>
+</ul>
+
+				</li>
+</ul>
+
+							<ul>
+		<li  id='menu_package_org_mock_event' class='package'>
+																	<a href="package_org_mock_event.html">org.mock.event</a>
+
+															<ul>
+		<li  class=''>											<li id='menu_org_mock_event_testEvent' class=''>				<a href="org_mock_event_testEvent.html"><span class='packagePath'>org.mock.event.</span>testEvent</a>
 </li>
-							<li id='menu_org_mock_MockShape' class='private'>				<a href="org_mock_MockShape.html"><span class='packagePath'>org.mock.</span>MockShape</a>
+						</li>
+</ul>
+
+				</li>
+</ul>
+
+							<ul>
+		<li  id='menu_package_org_mock_model' class='package'>
+																	<a href="package_org_mock_model.html">org.mock.model</a>
+
+															<ul>
+		<li  class=''>											<li id='menu_org_mock_model_Model' class=''>				<a href="org_mock_model_Model.html"><span class='packagePath'>org.mock.model.</span>Model</a>
 </li>
-							<li id='menu_org_mock_MockTranslator' class='private'>				<a href="org_mock_MockTranslator.html"><span class='packagePath'>org.mock.</span>MockTranslator</a>
+						</li>
+</ul>
+
+				</li>
+</ul>
+
+							<ul>
+		<li  id='menu_package_org_mock_red5' class='package'>
+																	<a href="package_org_mock_red5.html">org.mock.red5</a>
+
+															<ul>
+		<li  class=''>											<li id='menu_org_mock_red5_IShape' class='interface'>				<a href="org_mock_red5_IShape.html"><span class='packagePath'>org.mock.red5.</span>IShape</a>
 </li>
-							<li id='menu_org_mock_Red5' class=''>				<a href="org_mock_Red5.html"><span class='packagePath'>org.mock.</span>Red5</a>
+							<li id='menu_org_mock_red5_Red5' class=''>				<a href="org_mock_red5_Red5.html"><span class='packagePath'>org.mock.red5.</span>Red5</a>
 </li>
-							<li id='menu_org_mock_Red5Test' class=''>				<a href="org_mock_Red5Test.html"><span class='packagePath'>org.mock.</span>Red5Test</a>
+							<li id='menu_org_mock_red5_Red5Test' class=''>				<a href="org_mock_red5_Red5Test.html"><span class='packagePath'>org.mock.red5.</span>Red5Test</a>
+</li>
+						</li>
+</ul>
+
+				</li>
+</ul>
+
+							<ul>
+		<li  id='menu_package_org_mock_view' class='package'>
+																	<a href="package_org_mock_view.html">org.mock.view</a>
+
+															<ul>
+		<li  class=''>											<li id='menu_org_mock_view_panelMediator' class=''>				<a href="org_mock_view_panelMediator.html"><span class='packagePath'>org.mock.view.</span>panelMediator</a>
 </li>
 						</li>
 </ul>
@@ -217,46 +208,7 @@ class MockShape extends Mock implements IShape {
 																	<a href="package_org_test.html">org.test</a>
 
 															<ul>
-		<li  class=''>											<li id='menu_org_test_context' class=''>				<a href="org_test_context.html"><span class='packagePath'>org.test.</span>context</a>
-</li>
-						</li>
-</ul>
-
-				</li>
-</ul>
-
-							<ul>
-		<li  id='menu_package_org_test_event' class='package'>
-																	<a href="package_org_test_event.html">org.test.event</a>
-
-															<ul>
-		<li  class=''>											<li id='menu_org_test_event_testEvent' class=''>				<a href="org_test_event_testEvent.html"><span class='packagePath'>org.test.event.</span>testEvent</a>
-</li>
-						</li>
-</ul>
-
-				</li>
-</ul>
-
-							<ul>
-		<li  id='menu_package_org_test_model' class='package'>
-																	<a href="package_org_test_model.html">org.test.model</a>
-
-															<ul>
-		<li  class=''>											<li id='menu_org_test_model_Model' class=''>				<a href="org_test_model_Model.html"><span class='packagePath'>org.test.model.</span>Model</a>
-</li>
-						</li>
-</ul>
-
-				</li>
-</ul>
-
-							<ul>
-		<li  id='menu_package_org_test_view' class='package'>
-																	<a href="package_org_test_view.html">org.test.view</a>
-
-															<ul>
-		<li  class=''>											<li id='menu_org_test_view_panelMediator' class=''>				<a href="org_test_view_panelMediator.html"><span class='packagePath'>org.test.view.</span>panelMediator</a>
+		<li  class=''>											<li id='menu_org_test_MockRed5Test' class=''>				<a href="org_test_MockRed5Test.html"><span class='packagePath'>org.test.</span>MockRed5Test</a>
 </li>
 						</li>
 </ul>
@@ -298,11 +250,7 @@ class MockShape extends Mock implements IShape {
 				<div id='headerContentWrapper'>
 					<div id='headerContent'>
 						<ul id='headerButtons'>
-															<li id='toggleTocButton'><a href="#"><span class='disclosure'>&#9660;</span><span class='closure'>&#9658;</span>Navigation</a></li>							<li id='togglePrivateButton'>
-	<span class='privateHide'><a href="#" class='jqButton jqButtonSmall'><span class='jqButtonIcon'>&times;</span>Hide private and protected</a></span>
-	<span class='privateShow'><a href="#" class='jqButton jqButtonSmall'><span class='jqButtonIcon'>+</span>Show private and protected</a></span>
-</li>
-						</ul>
+															<li id='toggleTocButton'><a href="#"><span class='disclosure'>&#9660;</span><span class='closure'>&#9658;</span>Navigation</a></li>													</ul>
 					</div>
 				</div>
 			</div>

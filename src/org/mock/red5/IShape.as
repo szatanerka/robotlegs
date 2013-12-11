@@ -1,7 +1,9 @@
-package org.mock
+/**
+ * This is interface.
+ */
+package org.mock.red5
 {
 	import flash.geom.Point;
-//interface form my test package
 	public interface IShape
 	{
 		function getShape():Point;

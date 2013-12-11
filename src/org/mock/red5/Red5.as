@@ -1,5 +1,7 @@
-//My simple mock class to set end get Point of mouse
-package org.mock
+/**
+ * Mock class to set and get Point of mouse.
+ */
+package org.mock.red5
 {
 	import flash.geom.Point;
 
@@ -11,17 +13,23 @@ package org.mock
 		public function Red5(_x:IShape){
 			this._xandy = _x;
 		}  
-	//return moved point
+		/**
+		 * Return mouse point.
+		 */
 		public function getShape():Point
 		{
 			return _shape;
 		}
-	//set start point
+		/**
+		 * Start mouse point.
+		 */
 		public function setShape(evt:Point):void
 		{
 			_shape = evt;
 		}
-	//to mock test class simple test value
+		/**
+		 * For test mock.
+		 */
 		public function sayHelloXandY(x:uint, y:uint):uint{
 			return _xandy.setShapeTest( x, y);
 		}

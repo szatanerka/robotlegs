@@ -9,12 +9,12 @@
 			   minWidth="955" minHeight="600" creationComplete="onCreationComplete()">
 	<fx:Script>
 		<![CDATA[
-			import org.mock.MockRed5Test;
+			import org.test.MockRed5Test;
 			
 			public function currentRunTestSuite():Array
 			{
 				var testsToRun:Array = new Array();
-				testsToRun.push(org.mock.MockRed5Test);
+				testsToRun.push(org.test.MockRed5Test);
 				return testsToRun;
 			}
 			

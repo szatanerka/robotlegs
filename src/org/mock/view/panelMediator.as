@@ -1,5 +1,7 @@
-//panel mediator 
-package org.test.view
+/**
+ * Mediator class comunication panelView and Model.
+ */
+package org.mock.view
 {
 	import flash.events.Event;
 	import flash.events.MouseEvent;
@@ -8,8 +10,8 @@ package org.test.view
 	import mx.controls.Alert;
 	
 	import org.robotlegs.mvcs.Mediator;
-	import org.test.event.testEvent;
-	import org.test.model.Model;
+	import org.mock.event.testEvent;
+	import org.mock.model.Model;
 
 	public class panelMediator extends Mediator
 	{
@@ -24,7 +26,10 @@ package org.test.view
 		public function panelMediator()
 		{
 		}
-		//register map listener
+		/**
+		 * @ovveride modeiator.
+		 * start eventMap listener for MouseEvent and custom testEvent
+		 */
 		override public function onRegister():void
 		{
 			eventMap.mapListener(view.drawCanvas,MouseEvent.MOUSE_DOWN,addShape);
@@ -35,7 +40,9 @@ package org.test.view
 			eventMap.mapListener(eventDispatcher,testEvent.SHAPEUPDATE,addShapeMouseEvent);
 
 		}
-		//mouse move point from red5
+		/**
+		 * Mouse move point to red5.
+		 */
 		private function addShapeMouseEvent(e:testEvent):void
 		{
 			// TODO Auto Generated method stub
@@ -43,21 +50,28 @@ package org.test.view
 			view.myDrawing.graphics.lineTo(_model.mPoint.x,_model.mPoint.y);
 			
 		}
-		//mouse start point from red5
+
+		/**
+		 * Mouse start point to red5.
+		 */
 		private function addShapeEvent(e:testEvent):void
 		{
 			// TODO Auto Generated method stub
 			view.myDrawing.graphics.moveTo(_model.shapePoint.x,_model.shapePoint.y);
 
 		}
-		//mouse up stop draw lines
+		/**
+		 * Mouse up stop drawing.
+		 */
 		private function stopCreateShape(e:MouseEvent):void
 		{
 			// TODO Auto Generated method stub
 			mouseHolding = false;
 
 		}
-		//mouse move start create line and send to red5
+		/**
+		 * Mouse move start create line.
+		 */
 		private function updateShape(e:MouseEvent):void
 		{
 			// TODO Auto Generated method stub
@@ -66,7 +80,9 @@ package org.test.view
 			_model.mousePoint(new Point(e.localX,e.localY));
 			}
 		}
-		//mouse down set start Point
+		/**
+		 * Mouse down start point is send.
+		 */
 		private function addShape(e:MouseEvent):void
 		{
 			// TODO Auto Generated method stub
